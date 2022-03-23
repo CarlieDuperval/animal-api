@@ -37,6 +37,7 @@ app.get('/animals', async (req, res) => {
         const result = await getAnimalByFilter(filter)
         res.status(200).send(result)
      } catch (error) {
+         console.error(error)
          res.status(500).send(error)
         }
     //res.send('Dogs')

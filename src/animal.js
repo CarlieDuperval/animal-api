@@ -92,7 +92,7 @@ export const deleteAnimal = async id => {
         query = query.where("color", "==", color)
     }
     if (age){
-        query = query.wheere("age", "==", age)
+        query = query.where("age", "==", age)
     }
     try {
         const snapshot = await query.get()
