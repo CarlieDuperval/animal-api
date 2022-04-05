@@ -1,8 +1,10 @@
 import express from 'express'
+import cors from 'cors'
 import { getAllAnimals, createAnimal , updateAnimal, deleteAnimal, getAnimalById, getAnimalByFilter} from './src/animal.js';
 
 const app = express();
 app.use(express.json())
+app.use(cors())
 
 app.get('/animals/:id', async (req, res) => {
     try{
